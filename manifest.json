@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Facebook Privacy Info Bar",
+  "description": "Displays a sidebar that lets you get information about FB privacy issues.",
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "54.0a1"
+    }
+  },
+
+  "sidebar_action": {
+    "default_icon": "icons/star.png",
+    "default_title" : "FB Info Bar",
+    "default_panel": "sidebar/panel.html",
+    "open_at_install": true
+  },
+
+  "content_scripts": [ //tells firefox to load a script into webpages whose URL matches a specific pattern.
+    //still working on correct content scripts
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["panel.js"]
+    }
+  ]
+
+}
