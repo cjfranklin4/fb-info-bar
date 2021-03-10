@@ -21,7 +21,7 @@
     //still working on correct content scripts
     {
       "matches": ["*://*.facebook.com/*"],
-      "js": ["panel.js"]
+      "js": ["fb-script.js"]
     }
   ]
 
