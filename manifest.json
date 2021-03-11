@@ -1,8 +1,8 @@
 {
 
   "manifest_version": 2,
-  "name": "Facebook Privacy Info Bar",
-  "description": "Displays a sidebar that lets you get information about FB privacy issues.",
+  "name": "Facebook PI: Privacy Investigator",
+  "description": "A Firefox extension about Facebook's various privacy issues and concerns.",
   "version": "1.0",
   "browser_specific_settings": {
     "gecko": {
@@ -11,14 +11,14 @@
   },
 
   "sidebar_action": {
-    "default_icon": "icons/star.png",
-    "default_title" : "FB Info Bar",
+    "default_icon": "icons/pi_icon.png",
+    "default_title" : "Facebook PI: Privacy Investigator",
     "default_panel": "sidebar/panel.html",
     "open_at_install": true
   },
 
-  "content_scripts": [ //tells firefox to load a script into webpages whose URL matches a specific pattern.
-    //still working on correct content scripts
+  "content_scripts": [
+
     {
       "matches": ["*://*.facebook.com/*"],
       "js": ["fb-script.js"]
